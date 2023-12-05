@@ -1,0 +1,22 @@
+
+.header{
+    background: var(--main-color);;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    border-bottom: 3px #b8b3b3 solid;
+    height: 8vh;
+}
+
+.header h1{
+    margin: 0;
+}
+.header p{
+    background-color: #FFDD2D;
+    padding: 0.8rem 1.5rem;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    margin: 0;
+}

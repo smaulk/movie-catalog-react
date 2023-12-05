@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import "./index.css"
+import axios from "axios";
+import {useEffect, useState} from "react";
+import MovieBlock from "./components/movie_block/movieBlock";
+import MovieListElement from "./components/movie_list_element/movieListElement";
+import MovieList from "./components/movie_list/movieList";
+import MovieService from "./API/MovieService";
+import Header from "./components/header/header";
+import MainBlock from "./components/main_block/mainBlock";
+import CreateOrEditMovieBlock from "./components/create_movie_block/createOrEditMovieBlock";
 
 function App() {
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <Header title={"Фильмотека"} author={"Мухаметдинов С.Р."}></Header>
+        <MainBlock></MainBlock>
     </div>
   );
 }

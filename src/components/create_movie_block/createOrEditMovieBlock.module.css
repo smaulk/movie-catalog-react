@@ -1,0 +1,96 @@
+
+.block{
+     box-sizing: border-box;
+     padding: 0.2rem  1rem;
+     display: flex;
+     flex-direction: column;
+     width: 68%;
+     height: 90vh;
+     background-color: var(--main-color);
+ }
+
+.block > h2{
+     margin: 0.5rem 0 0.5rem 1rem;
+     font-size: 2rem;
+}
+
+.inputData{
+     display: flex;
+     flex-direction: column;
+     overflow: auto;
+     max-height: 72%;
+     padding: 1rem;
+}
+
+.inputData > p:first-child{
+     margin-top: 0;
+}
+
+.inputData > p{
+     font-size: 1.2rem;
+}
+
+.inputData > input, .inputData > div > textarea{
+     border-radius: 10px;
+     border: 0;
+     background-color: #ECF1F7;
+     padding: 1.2rem;
+}
+
+.inputData > input {
+     width: 45%;
+     font-size: 1rem;
+}
+
+.inputData > div > textarea {
+     width: 85%;
+     height: 10vh;
+     font-size: 0.9rem;;
+}
+
+.genresList{
+     display: flex;
+     flex-direction: column;
+     flex-wrap: wrap;
+     max-height: 10vh;
+     gap: 0.3rem;
+
+}
+.genresList  input {
+     transform:scale(1.5);
+     margin-right: 0.6rem;
+}
+
+.footer{
+     margin-top: 2rem;
+     padding: 0 2rem;
+     height: 12vh;
+     display: flex;
+     align-items: center;
+     border-top: 3px #D9D9D9 solid;
+     justify-content: flex-end;
+     gap: 1.5rem;
+}
+
+.saveBtn, .cancelBtn{
+     padding: 0.7rem 0.9rem;
+     border-radius: 10px;
+     border: 0;
+     border-bottom: 2px #b8b3b3 solid;
+}
+
+.saveBtn{
+     background-color: #FFDD2D;
+     color: black;
+}
+.saveBtn:hover{
+     background-color: #f1b40b;
+}
+
+.cancelBtn{
+     background-color: #ECF1F7;;
+     color: #336FEE;
+}
+.cancelBtn:hover{
+     background-color: rgba(66, 139, 249, 0.20);
+}

@@ -1,0 +1,44 @@
+.element {
+    background-color: white;
+    border-radius: 10px;
+    border-bottom: 3px #b8b3b3 solid;
+    width: 85%;
+    padding: 0.3rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.element:hover{
+    border: 2px #6C6C6C solid;
+}
+
+.element *{
+    margin: 0;
+}
+
+.element > p{
+    color: black;
+    font-weight: bold;
+}
+
+
+.elementInfo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 0.5rem;
+    color: #6C6C6C;
+}
+
+.elementInfo > b{
+    font-weight: bolder;
+    color: black;
+}
+
+.clicked{
+    background: #EBF4FF;
+}
