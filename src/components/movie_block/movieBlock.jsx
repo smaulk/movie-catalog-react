@@ -8,7 +8,7 @@ const MovieBlock = (props) => {
 
     const updateMovie = {...props.movie,
         title: truncateString(props.movie.title, 33),
-        plot: truncateString(props.movie.plot, 1500)
+        plot: truncateString(props.movie.plot, 700)
     }
     const genres = truncateString(props.movie.genres.join(', '), 50);
 
@@ -96,7 +96,7 @@ const MovieBlock = (props) => {
 
             <div className={classes.moviePlot}>
                 <h2>Описание</h2>
-                <p>{updateMovie.plot}</p>
+                <p title={props.movie.plot}>{updateMovie.plot}</p>
             </div>
         </div>
     );
