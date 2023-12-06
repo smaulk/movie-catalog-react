@@ -81,7 +81,7 @@ button{
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-height: 68%;
+    height: 68%;
     overflow: auto;
     padding: 0 0.2rem;
 }

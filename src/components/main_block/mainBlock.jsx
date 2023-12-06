@@ -45,8 +45,10 @@ const MainBlock = (props) => {
 
     async function createMovie(newMovie){
         const response = await MovieService.createMovie(getNextId(originalMovies), newMovie);
-        if(response.status === 200) setMovie(response.data);
-        fetchMovies();
+        if(response.status === 201) {
+            setMovie(response.data);
+            fetchMovies();
+        }
     }
 
     async function updateMovie(newMovie){

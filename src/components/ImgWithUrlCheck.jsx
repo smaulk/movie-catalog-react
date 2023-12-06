@@ -10,12 +10,19 @@ const ImgWithUrlCheck = ({ src, defaultSrc, alt, ...props }) => {
     }, [src, defaultSrc]);
 
     async function checkUrl() {
-        try {
-            const response = await fetch(src);
-            if (response.ok) {
-                setImageUrl(src);
+        try
+        {
+            if(src !== '')
+            {
+                const response = await fetch(src);
+                if (response.ok) {
+                    setImageUrl(src);
+                }
             }
-        } catch (error) {
+            else setImageUrl(defaultSrc);
+        }
+        catch (error)
+        {
             setImageUrl(defaultSrc);
         }
     }

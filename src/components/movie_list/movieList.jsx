@@ -4,7 +4,7 @@ import MovieListElement from "../movie_list_element/movieListElement";
 
 const MovieList = (props) => {
 
-
+    const nullGenre = '-------------';
     const [activeItemId, setActiveItemId] = useState(null);
     const onClick = (id) => {
         props.onClickItem(id);
@@ -13,12 +13,12 @@ const MovieList = (props) => {
 
 
     const [searchValue, setSearchValue] = useState('');
-    const [selectedGenre, setSelectedGenre] = useState('------');
+    const [selectedGenre, setSelectedGenre] = useState(nullGenre);
 
 
     const onSearch = () => {
 
-        if(selectedGenre === '------') props.onSearch(searchValue, null);
+        if(selectedGenre === nullGenre) props.onSearch(searchValue, null);
         else  props.onSearch(searchValue, selectedGenre);
     };
 
@@ -47,7 +47,7 @@ const MovieList = (props) => {
                     <div className={classes.filterInfo}>
                         <label>Фильтр по жанру:</label>
                         <select value={selectedGenre} onChange={event => setSelectedGenre(event.target.value)}>
-                            <option>------</option>
+                            <option>{nullGenre}</option>
                             {props.genres.map(genre => <option>{genre}</option>)}
                         </select>
                     </div>
